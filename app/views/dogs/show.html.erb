@@ -1,0 +1,10 @@
+<h1> <%=@dog.name %> </h1>
+
+<p> Hello! My name is <%=@dog.name%>! I am a very good pupperoni who loves pets. </p>
+<p> I am a <%=@dog.age%> woofer. I am a <%=@dog.breed%>.  </p>
+<h3> Here is a list of my owners! </h3>
+ <ul>
+     <% @dog.employees.each do |owner| %>
+        <li> <%=link_to owner.first_name, owner %> </li>
+    <%end%>
+</ul>
