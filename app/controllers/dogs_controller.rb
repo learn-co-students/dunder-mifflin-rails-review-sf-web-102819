@@ -1,7 +1,11 @@
 class DogsController < ApplicationController
 
     def index
-        @dogs = Dog.all 
+        if params[:sort]
+            @dogs = Dog.all.sort{ |dog_a, dog_b| dog_b.employees.count <=> dog_a.employees.count }
+        else
+            @dogs = Dog.all
+        end
     end
 
     def new
