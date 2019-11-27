@@ -1,0 +1,11 @@
+<center>
+<p><b>Employee Full Name:</b> <%= @employee.full_name %><br><br>
+<b>Employee Alias: </b><%= @employee.alias %><br><br>
+<b>Employee Title: </b><img src="<% @employee.title %>"><br><br>
+<b>Employee Office: </b><%= @employee.office %><br><br>
+<b>Employee Image: <br><br></b><img src="<%=@employee.img_url %>"</img><br>
+<br>
+<%= link_to "Edit!!!!", edit_employee_path(@employee) %>
+
+</p>
+</center>
