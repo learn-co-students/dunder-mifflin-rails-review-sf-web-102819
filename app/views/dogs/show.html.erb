@@ -1,0 +1,11 @@
+<h1>Dog Show Page</h1>
+<label>Dog Name:</label>
+<h5><%= @dog.name %></h5>
+<label>Dog Breed:</label>
+<h5><%= @dog.breed %></h5>
+<label>Dog Age:</label>
+<h5><%= @dog.age %></h5>
+<% @dog.employees.each do |e| %>
+  <h5>-<%= e.first_name %> <%= e.last_name %></h5>
+<% end %>
+<%= button_to "delete", @dog, :method => :delete %>
