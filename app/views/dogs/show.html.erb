@@ -1,7 +1,7 @@
 <center>
 <p><b>Dog Name:</b> <%= @dog.name %></p>
 <p><b>Dog Breed:</b> <%= @dog.breed %></p>
-<p><b>Dog Age:</b> <%= @dog.age %></p>
+<p><b>Dog Age:</b> <%= @dog.age %></p> 
 <p><b>Owners:</b>
 <% @dog.employees.each do |employee| %>
     <%= link_to employee.full_name, employee_path(employee) %> 
